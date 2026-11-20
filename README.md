@@ -2,7 +2,7 @@
   <img src="public/images/logo.png" alt="Logo TEMPA" width="90">
   <h1>TEMPA</h1>
   <p><strong>Temukan Partner untuk Aksi. Wujudkan Tim Kompetisi Impianmu.</strong></p>
-  <p>Platform pencari partner kompetisi mahasiswa lintas disiplin ilmu dilengkapi dengan <em>Skill-Gap Analyzer</em>.</p>
+  <p>Platform pencari partner kompetisi mahasiswa lintas disiplin ilmu di lingkup Universitas Brawijaya.</p>
 </div>
 
 ---
