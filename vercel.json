@@ -9,20 +9,12 @@
     },
     "routes": [
         {
-            "src": "/css/(.*)",
-            "dest": "/public/css/$1"
+            "src": "/(css|js|images|assets|build|storage)/(.*)",
+            "dest": "/$1/$2"
         },
         {
-            "src": "/js/(.*)",
-            "dest": "/public/js/$1"
-        },
-        {
-            "src": "/images/(.*)",
-            "dest": "/public/images/$1"
-        },
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
+            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|webp|woff|woff2|ttf))",
+            "dest": "/$1"
         },
         {
             "src": "/(.*)",
@@ -32,6 +24,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
+        "APP_URL": "https://tempa-two.vercel.app",
+        "ASSET_URL": "https://tempa-two.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
