@@ -134,16 +134,12 @@
                             <div class="label-row">
                                 <label class="form-label" for="reg-email">Email mahasiswa</label>
                             </div>
-                            <input type="email" id="reg-email" name="email" class="form-input" placeholder="nama@student.ub.ac.id" required>
-                        </div>
-
+                            <input type="email" name="email" value="{{ old('email') }}" pattern=".+@student\.ub\.ac\.id" title="Gunakan email @student.ub.ac.id" required>                        </div>
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-password">Kata sandi</label>
                             </div>
-                            <input type="password" id="reg-password" name="password" class="form-input" placeholder="Masukkan kata sandi" required>
-                        </div>
-
+                            <input type="password" name="password" minlength="8" pattern="(?=.*\d).{8,}" title="Minimal 8 karakter dan mengandung setidaknya 1 angka" required>                        </div>
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-password-confirm">Konfirmasi kata sandi</label>
