@@ -29,8 +29,21 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="/login" class="btn-login-nav">Masuk</a>
-                <a href="/finding-partner/create" class="btn-primary-pill">+ Buat Finding Partner</a>
+                @auth
+                    <span style="font-size: 13.5px; font-weight: 700; color: #3b2a8f;">
+                        Halo, {{ explode(' ', Auth::user()->name)[0] }}
+                    </span>
+                    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                        @csrf
+                        <button type="submit" style="background: none; border: 1.5px solid #d9d2f7; padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 700; color: #b91c1c; cursor: pointer;">
+                            Keluar
+                        </button>
+                    </form>
+                    <a href="/finding-partner/create" class="btn-primary-pill">+ Buat Finding Partner</a>
+                @else
+                    <a href="/login" class="btn-login-nav">Masuk</a>
+                    <a href="/login" class="btn-primary-pill">+ Buat Finding Partner</a>
+                @endauth
             </div>
         </div>
     </header>
