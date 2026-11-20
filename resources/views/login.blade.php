@@ -127,19 +127,23 @@
                             <div class="label-row">
                                 <label class="form-label" for="reg-name">Nama lengkap</label>
                             </div>
-                            <input type="text" id="reg-name" name="name" class="form-input" placeholder="Masukkan nama lengkap" required>
+                            <input type="text" id="reg-name" name="name" class="form-input" value="{{ old('name') }}" placeholder="Masukkan nama lengkap" required>
                         </div>
 
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-email">Email mahasiswa</label>
                             </div>
-                            <input type="email" name="email" value="{{ old('email') }}" pattern=".+@student\.ub\.ac\.id" title="Gunakan email @student.ub.ac.id" required>                        </div>
+                            <input type="email" id="reg-email" name="email" class="form-input" value="{{ old('email') }}" placeholder="nama@student.ub.ac.id" pattern=".+@student\.ub\.ac\.id" title="Gunakan email @student.ub.ac.id" required>
+                        </div>
+
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-password">Kata sandi</label>
                             </div>
-                            <input type="password" name="password" minlength="8" pattern="(?=.*\d).{8,}" title="Minimal 8 karakter dan mengandung setidaknya 1 angka" required>                        </div>
+                            <input type="password" id="reg-password" name="password" class="form-input" placeholder="Minimal 8 karakter dengan angka" minlength="8" pattern="(?=.*\d).{8,}" title="Minimal 8 karakter dan mengandung setidaknya 1 angka" required>
+                        </div>
+
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-password-confirm">Konfirmasi kata sandi</label>
@@ -151,21 +155,21 @@
                             <div class="label-row">
                                 <label class="form-label" for="reg-fakultas">Fakultas</label>
                             </div>
-                            <input type="text" id="reg-fakultas" name="fakultas" class="form-input" placeholder="Masukkan fakultas" required>
+                            <input type="text" id="reg-fakultas" name="fakultas" class="form-input" value="{{ old('fakultas') }}" placeholder="Masukkan fakultas" required>
                         </div>
 
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-prodi">Program studi</label>
                             </div>
-                            <input type="text" id="reg-prodi" name="program_studi" class="form-input" placeholder="Masukkan program studi" required>
+                            <input type="text" id="reg-prodi" name="program_studi" class="form-input" value="{{ old('program_studi') }}" placeholder="Masukkan program studi" required>
                         </div>
 
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="reg-angkatan">Angkatan</label>
                             </div>
-                            <input type="number" id="reg-angkatan" name="angkatan" class="form-input" placeholder="Masukkan angkatan" required>
+                            <input type="number" id="reg-angkatan" name="angkatan" class="form-input" value="{{ old('angkatan') }}" placeholder="Masukkan angkatan" required>
                         </div>
 
                         <button type="submit" class="btn-submit" style="margin-top: 8px;">Daftar</button>
