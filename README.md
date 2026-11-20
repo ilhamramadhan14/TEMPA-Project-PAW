@@ -9,7 +9,7 @@
 
 ## Tentang TEMPA
 
-Mencari anggota tim lomba sering kali masih bergantung pada grup percakapan yang informasinya cepat tenggelam dan lingkaran pertemanan yang terbatas. **TEMPA** hadir merapikan seluruh alur pembentukan tim kompetisi mahasiswa dalam satu platform terstruktur—mulai dari publikasi kebutuhan anggota, penyaringan pelamar, diskusi langsung dengan ketua tim, hingga pemetaan kecocokan keahlian.
+Mencari anggota tim lomba sering kali masih bergantung pada grup percakapan yang informasinya cepat tenggelam dan lingkaran pertemanan yang terbatas. **TEMPA** hadir merapikan seluruh alur pembentukan tim kompetisi mahasiswa dalam satu platform terstruktur mulai dari publikasi kebutuhan anggota, penyaringan pelamar, diskusi langsung dengan ketua tim, hingga pemetaan kecocokan keahlian.
 
 ## Fitur Utama
 
