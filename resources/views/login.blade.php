@@ -70,6 +70,13 @@
                     <button type="button" id="tab-daftar" class="tab-btn {{ ($tab ?? 'masuk') === 'daftar' ? 'active' : '' }}">Daftar</button>
                 </div>
 
+                <!-- Pesan Sukses -->
+                @if (session('success'))
+                    <div style="background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; padding: 12px 16px; border-radius: 12px; font-size: 13px; margin-bottom: 18px;">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
                 <!-- Pesan Error -->
                 @if ($errors->any())
                     <div style="background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 12px 16px; border-radius: 12px; font-size: 13px; margin-bottom: 18px;">

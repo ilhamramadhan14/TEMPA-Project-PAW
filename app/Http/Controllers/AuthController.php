@@ -45,11 +45,9 @@ class AuthController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        Auth::login($user);
-
-        return redirect('/')->with('success', 'Akun berhasil dibuat!');
+        return redirect('/login')->with('success', 'Akun berhasil dibuat! Silakan masuk menggunakan email dan kata sandi kamu.');
     }
-
+    
     public function login(Request $request)
     {
         $credentials = $request->validate([
