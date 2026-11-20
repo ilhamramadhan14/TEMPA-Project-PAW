@@ -70,6 +70,17 @@
                     <button type="button" id="tab-daftar" class="tab-btn {{ ($tab ?? 'masuk') === 'daftar' ? 'active' : '' }}">Daftar</button>
                 </div>
 
+                <!-- Pesan Error -->
+                @if ($errors->any())
+                    <div style="background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 12px 16px; border-radius: 12px; font-size: 13px; margin-bottom: 18px;">
+                        <ul style="margin-left: 16px;">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <!-- FORM MASUK -->
                 <div id="form-masuk" style="display: {{ ($tab ?? 'masuk') === 'masuk' ? 'block' : 'none' }};">
                     <h2 class="form-title">Selamat datang kembali!</h2>

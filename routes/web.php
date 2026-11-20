@@ -17,3 +17,5 @@ Route::get('/signup', function () {
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::post('/register', [AuthController::class, 'register']);
