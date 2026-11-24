@@ -23,3 +23,10 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/temukan-partner', [FindingController::class, 'index'])->name('findings.index');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/buat-finding-partner', [FindingController::class, 'create'])->name('findings.create');
+    Route::post('/buat-finding-partner', [FindingController::class, 'store'])->name('findings.store');
+});
