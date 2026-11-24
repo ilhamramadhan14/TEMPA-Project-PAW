@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="/css/findings.css">
 </head>
 <body>
-    <div class="bg-glow-top"></div>
+    <div class="glow glow-hero-tr"></div>
+    <div class="glow glow-hero-bl"></div>
 
     <header class="navbar">
-        <a href="/" class="brand">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo TEMPA" style="height: 30px;">
-        </a>
-        <nav class="nav-links">
-            <a href="/">Beranda</a>
-            <a href="{{ route('findings.index') }}" class="active">Temukan Partner</a>
-            <a href="#">Dashboard Tim</a>
-            <a href="#">Chat</a>
-        </nav>
-        <div class="nav-actions">
-            @auth
-                <span class="user-name">{{ Auth::user()->name }}</span>
-                <a href="{{ route('findings.create') }}" class="btn-primary">+ Buat Finding Partner</a>
-            @else
-                <a href="{{ route('login') }}" class="link-login">Masuk</a>
-                <a href="{{ route('findings.create') }}" class="btn-primary">+ Buat Finding Partner</a>
-            @endauth
+        <div class="navbar-inner">
+            <a href="/" class="brand">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo TEMPA" style="height: 30px;">
+            </a>
+            <nav class="nav-links">
+                <a href="/">Beranda</a>
+                <a href="{{ route('findings.index') }}" class="active">Temukan Partner</a>
+                <a href="#">Dashboard Tim</a>
+                <a href="#">Chat</a>
+            </nav>
+            <div class="nav-actions">
+                @auth
+                    <span class="user-greeting">Halo, {{ Auth::user()->name }}</span>
+                    <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                        @csrf
+                        <button type="submit" class="btn-logout">Keluar</button>
+                    </form>
+                    <a href="{{ route('findings.create') }}" class="btn-primary">+ Buat Finding Partner</a>
+                @else
+                    <a href="{{ route('login') }}" class="link-login">Masuk</a>
+                    <a href="{{ route('findings.create') }}" class="btn-primary">+ Buat Finding Partner</a>
+                @endauth
+            </div>
         </div>
     </header>
 
