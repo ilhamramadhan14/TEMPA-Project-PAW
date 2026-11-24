@@ -24,7 +24,7 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/temukan-partner', [FindingController::class, 'index'])->name('findings.index');
+Route::get('/finding-partner', [FindingController::class, 'index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/buat-finding-partner', [FindingController::class, 'create'])->name('findings.create');

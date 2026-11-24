@@ -105,7 +105,6 @@
                         <div class="form-group">
                             <div class="label-row">
                                 <label class="form-label" for="login-password">Kata sandi</label>
-                                <a href="#" class="forgot-link">Lupa kata sandi?</a>
                             </div>
                             <input type="password" id="login-password" name="password" class="form-input" placeholder="Masukkan kata sandi" required>
                         </div>
